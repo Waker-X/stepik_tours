@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block container_tour %}
+    {% load stars %}
+  <main class="container"   >
+    <section class="mt-3 pb-5">
+      <h1 class="display-3 mt-4">{{ tour.title }} {{ tour.stars|stars }}</h1>
+      <p class="lead">{{ tour.country }} из {% for key,value in departures.items %}{% if key == tour.departure %}{{ value|slice:"2:" }}{% endif %}{% endfor %} {{ tour.nights }} ночей</p>
+      <img src="{{ tour.picture }}">
+      <p class="my-4 w-75">{{ tour.description }}</p>
+      <a href="" class="btn btn-success btn-lg">Купить тур за {{ tour.price }}</a>
+    </section>
+  </main>
+{% endblock container_tour %}
