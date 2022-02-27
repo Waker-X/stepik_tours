@@ -26,8 +26,10 @@ SECRET_KEY = 'django-insecure-!4ec#bkqh2&4)(l4+zcx7eqro))$udq#s$e#(5h31lwz1@the(
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost'
+    '*'
 ]
+
+STATIC_ROOT = 'static'
 
 
 # Application definition
